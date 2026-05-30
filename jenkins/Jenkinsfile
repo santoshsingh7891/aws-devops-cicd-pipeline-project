@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_HUB_USER = 'YOUR_DOCKERHUB_USERNAME'
+        DOCKER_IMAGE = 'zendrix-app'
+    }
+
+    stages {
+
+        stage('Checkout SCM') {
+            steps {
+                git branch: 'master',
+                url: 'https://github.com/santoshsingh7891/website.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t $DOCKER_IMAGE:latest .'
+            }
+        }
+
+        stage('Run & Test Locally') {
+            steps {
+                sh '''
+                docker rm -f zendrix-app || true
+                docker run -d -p 85:80 --name zendrix-app $DOCKER_IMAGE:latest
+
+                sleep 5
+
+                curl -s http://localhost:85
+                '''
+            }
+        }
+
+        stage('Push To DockerHub') {
+            steps {
+                echo 'Push Image'
+            }
+        }
+
+        stage('Deploy To Kubernetes') {
+            steps {
+                echo 'Deploy Application'
+            }
+        }
+    }
+}
