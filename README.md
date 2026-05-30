@@ -1,10 +1,28 @@
 # 🚀 AWS DevOps CI/CD Pipeline Project
 
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
+![Ansible](https://img.shields.io/badge/Ansible-Automation-black)
+
 ## 📌 Project Overview
 
 This project demonstrates the implementation of a complete DevOps CI/CD pipeline on AWS using Docker, Jenkins, Kubernetes (K3s), Terraform, and Ansible.
 
 The objective was to automate the deployment lifecycle from source code management to production deployment while following DevOps best practices.
+
+---
+
+## 🎯 Project Objectives
+
+- Automate application deployment using CI/CD practices.
+- Containerize applications using Docker.
+- Deploy workloads on Kubernetes.
+- Provision infrastructure using Terraform.
+- Automate configuration management using Ansible.
+- Demonstrate end-to-end DevOps lifecycle implementation on AWS.
 
 ---
 
