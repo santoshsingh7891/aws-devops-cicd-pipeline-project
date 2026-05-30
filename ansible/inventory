@@ -1,0 +1,5 @@
+[devops]
+aws-server ansible_host=<EC2_PUBLIC_IP>
+
+[devops:vars]
+ansible_user=ubuntu
