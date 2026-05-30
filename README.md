@@ -7,6 +7,8 @@
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
 ![Ansible](https://img.shields.io/badge/Ansible-Automation-black)
 
+---
+
 ## 📌 Project Overview
 
 This project demonstrates the implementation of a complete DevOps CI/CD pipeline on AWS using Docker, Jenkins, Kubernetes (K3s), Terraform, and Ansible.
@@ -17,12 +19,12 @@ The objective was to automate the deployment lifecycle from source code manageme
 
 ## 🎯 Project Objectives
 
-- Automate application deployment using CI/CD practices.
-- Containerize applications using Docker.
-- Deploy workloads on Kubernetes.
-- Provision infrastructure using Terraform.
-- Automate configuration management using Ansible.
-- Demonstrate end-to-end DevOps lifecycle implementation on AWS.
+* Automate application deployment using CI/CD practices.
+* Containerize applications using Docker.
+* Deploy applications on Kubernetes.
+* Provision infrastructure using Terraform.
+* Automate configuration management using Ansible.
+* Demonstrate an end-to-end DevOps lifecycle on AWS.
 
 ---
 
@@ -105,7 +107,7 @@ Docker Build         Application Test
   * SSH (22)
   * HTTP (80)
   * Application Port (85)
-  * Kubernetes NodePort Range (30000-32767)
+  * Kubernetes NodePort Range (30000–32767)
 
 ### Infrastructure Provisioning
 
@@ -133,6 +135,9 @@ Source Code
      |
      v
  Docker Image
+     |
+     v
+ Local Validation
      |
      v
  DockerHub
@@ -233,37 +238,13 @@ Ansible is used to:
 ```text
 aws-devops-cicd-pipeline-project
 │
-├── ansible
-│   ├── inventory
-│   └── install-java.yml
-│
-├── architecture
-│   └── architecture-diagram.png
-│
-├── docker
-│   └── Dockerfile
-│
-├── jenkins
-│   └── Jenkinsfile
-│
-├── kubernetes
-│   ├── deployment.yaml
-│   └── service.yaml
-│
-├── terraform
-│   ├── main.tf
-│   ├── variables.tf
-│   └── outputs.tf
-│
-├── screenshots
-│   ├── aws-ec2-instance.png
-│   ├── jenkins-dashboard.png
-│   ├── docker-build-success.png
-│   ├── application-running.png
-│   ├── jenkins-job-config.png
-│   ├── kubernetes-deployment.png
-│   └── pipeline-success.png
-│
+├── ansible/       -> Configuration Management
+├── architecture/  -> Architecture Diagram
+├── docker/        -> Docker Configuration
+├── jenkins/       -> CI/CD Pipeline
+├── kubernetes/    -> Deployment Manifests
+├── terraform/     -> Infrastructure as Code
+├── screenshots/   -> Project Screenshots
 └── README.md
 ```
 
@@ -318,6 +299,17 @@ aws-devops-cicd-pipeline-project
 ✅ Automated Application Validation
 
 ✅ Production-Style Deployment Workflow
+
+---
+
+## 📈 Resume Highlights
+
+* Designed and implemented an end-to-end CI/CD pipeline using Jenkins, Docker, Kubernetes, Terraform, and Ansible.
+* Automated application deployment from GitHub to Kubernetes.
+* Implemented Infrastructure as Code (IaC) using Terraform.
+* Automated Java installation and server configuration using Ansible.
+* Deployed containerized workloads on Kubernetes (K3s).
+* Hosted the complete solution on AWS EC2.
 
 ---
 
